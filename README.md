@@ -1,4 +1,6 @@
-# TailWindsCSS
+# TailWindCSS
+
+React + TailWindCSS 연습
 
 ## 설치
 
