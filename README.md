@@ -24,7 +24,9 @@ npx tailwindcss init -p
 
   1. 코드 가독성 향상 : Can I Use(https://caniuse.com/) 사이트의 값을 사용하여 CSS 규칙에 공급업체 접두사를 추가한다. Autoprefixer(https://www.npmjs.com/package/autoprefixer)은 현재 브라우저 인기도 및 속성 지원을 기반으로 데이터를 사용하여 접두사를 적용
 
-     - 변환 전
+     - _autoprefixer 설치한 이유가 이러한 걸 이용하기 위헤 postcss 설치 시 같이 설치한 것임_
+
+     * 변환 전
 
      ```css
      :fullscreen {
