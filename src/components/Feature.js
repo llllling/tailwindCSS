@@ -37,7 +37,7 @@ export const Feature = () => {
 
 function FeatureItem({ title, description }) {
   return (
-    <div class="flex">
+    <div className="flex">
       <div>
         <FaCheck className="w-7 mt-1 mr-3 text-blue-600" />
       </div>
