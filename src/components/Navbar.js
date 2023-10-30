@@ -1,12 +1,13 @@
 import React, { useState } from "react";
 import { FaAlignJustify, FaTimes } from "react-icons/fa";
+import { Link } from "react-scroll";
 
 const NAV_ITEMS = [
-  { name: "Home", path: "/" },
-  { name: "About", path: "/about" },
-  { name: "Support", path: "/support" },
-  { name: "Feature", path: "/feature" },
-  { name: "Feedback", path: "/feedback" }
+  { name: "Home", path: "home" },
+  { name: "About", path: "about" },
+  { name: "Support", path: "support" },
+  { name: "Feature", path: "feature" },
+  { name: "Feedback", path: "feedback" }
 ];
 
 export const Navbar = () => {
@@ -18,7 +19,11 @@ export const Navbar = () => {
           <h1 className="mr-4 text-3xl font-bold sm:text_4xl">Chatty</h1>
           <ul className="hidden md:flex">
             {NAV_ITEMS.map((item, key) => (
-              <li key={key}>{item.name}</li>
+              <li key={key} className="w-full border-b-2 border-gray-300">
+                <Link to={item.path} smooth={true} duration={500}>
+                  {item.name}
+                </Link>
+              </li>
             ))}
           </ul>
         </div>
@@ -40,7 +45,14 @@ export const Navbar = () => {
         <ul>
           {NAV_ITEMS.map((item, key) => (
             <li key={key} className="w-full border-b-2 border-gray-300">
-              {item.name}
+              <Link
+                onClick={() => setNav(false)}
+                to={item.path}
+                smooth={true}
+                duration={500}
+              >
+                {item.name}
+              </Link>
             </li>
           ))}
         </ul>
